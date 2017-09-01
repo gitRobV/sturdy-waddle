@@ -1,0 +1,30 @@
+.sidebar {
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sidebar a.icon {
+    text-align: center; 
+    display: block; 
+    padding:10px 25px;
+    font-size: 3em;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: #464646;
+}
+
+.sidebar a.icon:hover {
+    background-color: white;
+    color: #616161;
+}
+
+.dash_content {
+    display: inline-block;
+    vertical-align: top;
+    width:90%;
+    height: 100%;
+    color: #616161;
+    background-color: #3C3C3C;
+}

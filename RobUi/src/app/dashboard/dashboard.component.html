@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+<div class="sidebar">
+    <a @fade [routerLink]="['/dashboard', 'user']" class="icon"><i class="fa fa-users" aria-hidden="true"></i></a>
+    <a @fade [routerLink]="['/dashboard', 'projects']" class="icon"><i class="fa fa-flask" aria-hidden="true"></i></a>
+    <a @fade [routerLink]="['/dashboard']" class="icon"><i class="fa fa-github" aria-hidden="true"></i></a>
+    <a @fade [routerLink]="['/dashboard']" class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></a>
+    <a @fade [routerLink]="['/dashboard']" class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></a>      
+</div><div class="dash_content"><router-outlet></router-outlet>
+</div>
+

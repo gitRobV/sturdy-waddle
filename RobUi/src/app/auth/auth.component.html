@@ -1,0 +1,41 @@
+<app-nav></app-nav>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-sm-4 offset-sm-4" *ngIf="!authorizedUser">
+            <div class="card">
+                <div class="card-block">
+                    <h2 class="card-title">{{ currStatus.action }}</h2>
+                    <form (submit)="authFormHandler(currStatus.register)">
+                        <div class="form-group">
+                            <label class="sr-only" for="email">Email address</label>
+                            <input type="email" name="email" id="email" [(ngModel)]="user.email" #email="ngModel" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="password">Password</label>
+                            <input type="password" name="password" id="password" [(ngModel)]="user.password" #password="ngModel" class="form-control"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group" *ngIf="currStatus.register">
+                            <label class="sr-only" for="confirm_pw">Confirm Password</label>
+                            <input type="password" name="confirm_pw" id="confirm_pw" [(ngModel)]="user.confirm_pw" #confirm_pw="ngModel" class="form-control"
+                                placeholder="Confirm Password">
+                        </div>
+                        <div class="form-check">
+                            <label (click)="toggle(!currStatus.register)" class="form-check-label">
+                                <input class="form-check-input" name="register" type="checkbox"
+                                [(ngModel)]="currStatus.register"
+                                #register="ngModel"
+                                value="true">
+                                Are you a New User? 
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">{{ currStatus.action }}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 offset-md-2" *ngIf="authorizedUser">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

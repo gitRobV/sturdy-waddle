@@ -1,0 +1,30 @@
+ .userOptions {
+    width: 20%;
+    background-color: #fafafa;
+    text-align: center;
+    
+    display: inline-block;
+    vertical-align: top;
+ }
+
+ .userOptions div {
+    border-top: solid 2px #ddd;
+    border-bottom: solid 1px #fff;
+     padding: 25px;
+ }
+
+ .editProfile {
+     width:30%;
+     display: inline-block;
+     vertical-align: top;
+     padding: 25px;
+     background-color: #fff;
+     border-left: solid 10px rgb(6, 194, 48)
+ }
+
+ .userList {
+    width:30%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+}
